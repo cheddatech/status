@@ -54,11 +54,23 @@ status-website:
       a:hover { color: #ffe44d; }
       h1, h2 { color: #ffd700; letter-spacing: -0.01em; }
       nav img { height: 2.5rem !important; border-radius: 0 !important; }
-      img[src*="graphs/"] {
+      article.graph { background-image: none !important; position: relative; }
+      article.graph::before { display: none !important; }
+      article.graph::after {
+        content: "";
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: min(280px, 40%);
+        background-image: var(--background);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 100% 100%;
         filter: grayscale(1) sepia(1) saturate(4) hue-rotate(5deg) brightness(0.85);
         opacity: 0.55;
+        pointer-events: none;
       }
+      article.graph > * { position: relative; z-index: 1; }
       @media (max-width: 700px) {
-        img[src*="graphs/"] { opacity: 0.15; }
+        article.graph::after { display: none; }
       }
     </style>
