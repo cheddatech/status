@@ -1,31 +1,39 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Upptime config for CheddaBoards status
+# Docs: https://upptime.js.org/docs/configuration
+
+owner: cheddatech
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: API
+    url: https://api.cheddaboards.com/health
+
+  - name: Leaderboards (on-chain)
+    url: https://fdvph-sqaaa-aaaap-qqc4a-cai.raw.icp0.io/games/test-game/scoreboards/all-time?limit=1
+
+  - name: Website
+    url: https://cheddaboards.com
+
+  - name: Docs
+    url: https://docs.cheddaboards.com
+
+  # Uncomment once The Standard is live on its canister
+  # - name: The Standard
+  #   url: https://standard.cheddatech.com
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.cheddaboards.com
+  name: CheddaBoards Status
+  introTitle: "CheddaBoards status"
+  introMessage: "Checked every few minutes from outside our own infrastructure. The API handles sign-in and score submission. Leaderboards are read straight from the chain, so they can stay up even when the API is down."
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: ICP network
+      href: https://status.internetcomputer.org
+    - title: Docs
+      href: https://docs.cheddaboards.com
+    - title: CheddaBoards
+      href: https://cheddaboards.com
+  # Optional: add a logo once you have a public URL for it
+  # logoUrl: https://cheddaboards.com/path-to-logo.png
