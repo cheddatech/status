@@ -22,7 +22,7 @@ sites:
   #   url: https://standard.cheddatech.com
 
 status-website:
-  cname: status.cheddaboards.com
+  cname: status.cheddatech.com
   name: CheddaBoards Status
   introTitle: "CheddaBoards status"
   introMessage: "Checked every few minutes from outside our own infrastructure. The API handles sign-in and score submission. Leaderboards are read straight from the chain, so they can stay up even when the API is down."
