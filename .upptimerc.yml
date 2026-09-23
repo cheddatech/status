@@ -24,6 +24,10 @@ sites:
 status-website:
   cname: status.cheddatech.com
   name: CheddaBoards Status
+  theme: dark
+  logoUrl: https://status.cheddatech.com/logo.png
+  favicon: https://status.cheddatech.com/favicon.png
+  hideNavTitle: true
   introTitle: "CheddaBoards status"
   introMessage: "Checked every few minutes from outside our own infrastructure. The API handles sign-in and score submission. Leaderboards are read straight from the chain, so they can stay up even when the API is down."
   navbar:
@@ -35,5 +39,19 @@ status-website:
       href: https://docs.cheddaboards.com
     - title: CheddaBoards
       href: https://cheddaboards.com
-  # Optional: add a logo once you have a public URL for it
-  # logoUrl: https://cheddaboards.com/path-to-logo.png
+  customHeadHtml: |
+    <style>
+      :root {
+        --body-background-color: #0a0a0a !important;
+        --body-text-color: #e8e8e8 !important;
+        --card-background-color: #111111 !important;
+        --card-border-color: #1e1e1e !important;
+        --nav-background-color: #0a0a0a !important;
+        --nav-border-bottom-color: #1e1e1e !important;
+        --nav-current-border-bottom-color: #ffd700 !important;
+      }
+      a { color: #ffd700; }
+      a:hover { color: #ffe44d; }
+      h1, h2 { color: #ffd700; letter-spacing: -0.01em; }
+      nav img { height: 2.5rem !important; border-radius: 0 !important; }
+    </style>
