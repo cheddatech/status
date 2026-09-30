@@ -11,6 +11,10 @@ sites:
   - name: Leaderboards (on-chain)
     url: https://fdvph-sqaaa-aaaap-qqc4a-cai.raw.icp0.io/games/test-game/scoreboards/all-time?limit=1
 
+  - name: Canister capacity
+    url: https://fdvph-sqaaa-aaaap-qqc4a-cai.raw.icp0.io/metrics
+    __dangerous__body_degraded: '"status":"warn"'
+
   - name: Website
     url: https://cheddaboards.com
 
@@ -29,7 +33,7 @@ status-website:
   favicon: https://status.cheddatech.com/favicon.png
   hideNavTitle: true
   introTitle: "CheddaBoards status"
-  introMessage: "Checked every few minutes from outside our own infrastructure. The API handles sign-in and score submission. Leaderboards are read straight from the chain, so they can stay up even when the API is down."
+  introMessage: "Checked regularly from outside our own infrastructure. The API handles sign-in and score submission. Leaderboards are read straight from the chain, so they can stay up even when the API is down. Canister capacity shows as degraded if cycles or memory get low, well before anything stops working."
   navbar:
     - title: Status
       href: /
@@ -67,7 +71,6 @@ status-website:
         background-size: 100% 100%;
         filter: grayscale(1) sepia(1) saturate(5) hue-rotate(-15deg) brightness(1.05);
         opacity: 0.7;
-        
         pointer-events: none;
       }
       article.graph > * { position: relative; z-index: 1; }
